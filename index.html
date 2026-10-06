@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artesanía Artesana - Inicio</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+    <header>
+        <!-- Bloque Izquierda: Logo -->
+        <div class="header-left">
+            <div class="logo-container">
+                <img src="Img/logo.png" alt="Artesanía Artesana Logo" class="logo-img" onerror="this.style.display='none'">
+            </div>
+        </div>
+        
+        <!-- Bloque Centro: Menú -->
+        <nav>
+            <a href="#" data-es="Inicio" data-en="Home" id="navHome">Inicio</a>
+            <a href="#" data-es="Cerámica" data-en="Ceramics" id="navCeramics">Cerámica</a>
+            <a href="#" data-es="Metal" data-en="Metal" id="navMetal">Metal</a>
+            <a href="#" data-es="Madera" data-en="Wood" id="navWood">Madera</a>
+            <a href="#" data-es="Contacto" data-en="Contact" id="navContact">Contacto</a>
+        </nav>
+
+        <!-- Bloque Derecha: Selector de Idioma -->
+        <div class="lang-selector">
+            <select id="languageSelect" onchange="changeLanguage()">
+                <option value="es">Español</option>
+                <option value="en">English</option>
+            </select>
+        </div>
+    </header>
+
+    <section class="hero">
+        <h1 id="heroTitle">Arte y Tradición en Tus Manos</h1>
+        <p id="heroText">Difundiendo nuestra artesanía única a nivel nacional e internacional.</p>
+        <a href="#" class="btn" id="heroBtn">Ver Catálogo</a>
+    </section>
+
+    <div class="features">
+        <div class="feature-box">
+            <img src="Img/imagen1.jpg" alt="Cerámica" class="feature-img" onerror="this.src='https://images.unsplash.com/photo-1578749556568-bc2c40e68b61?auto=format&fit=crop&w=400&q=80'">
+            <div class="feature-content">
+                <h3 id="f1Title">Cerámica</h3>
+                <p id="f1Text">Piezas artísticas, menaje, recipientes, botijos y vasijas modeladas con maestría.</p>
+            </div>
+        </div>
+
+        <div class="feature-box">
+            <img src="Img/imagen2.jpg" alt="Metal y Forja" class="feature-img" onerror="this.src='https://images.unsplash.com/photo-1565193566173-7a0ee3dbe261?auto=format&fit=crop&w=400&q=80'">
+            <div class="feature-content">
+                <h3 id="f2Title">Metal y Forja</h3>
+                <p id="f2Text">Trabajos de fundición, armas históricas, armaduras y forja tradicional.</p>
+            </div>
+        </div>
+
+        <div class="feature-box">
+            <img src="Img/imagen3.jpg" alt="Madera y Étnica" class="feature-img" onerror="this.src='https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&fit=crop&w=400&q=80'">
+            <div class="feature-content">
+                <h3 id="f3Title">Madera y Étnica</h3>
+                <p id="f3Text">Mobiliario nacional, artesanía religiosa, máscaras y tambores internacionales.</p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p id="footerText">&copy; 2026 Artesanía Artesana. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
