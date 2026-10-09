@@ -35,9 +35,44 @@ function changeLanguage() {
             f3Title: "Wood & Ethnic",
             f3Text: "National furniture, religious crafts, international masks and drums.",
             footerText: "&copy; 2026 Artesanía Artesana. All rights reserved."
+        },
+        fr: {
+            navHome: "Accueil",
+            navCeramics: "Céramique",
+            navMetal: "Métal",
+            navWood: "Bois",
+            navContact: "Contact",
+            heroTitle: "Art et Tradition dans Vos Mains",
+            heroText: "Diffusant notre artisanat unique à l'échelle nationale et internationale.",
+            heroBtn: "Voir le Catalogue",
+            f1Title: "Céramique",
+            f1Text: "Pièces artistiques, vaisselle, récipients et vases modelés avec maîtrise.",
+            f2Title: "Métal et Forge",
+            f2Text: "Travaux de fonderie, armes historiques, armures et forge traditionnelle.",
+            f3Title: "Bois et Ethnique",
+            f3Text: "Mobilier national, artisanat religieux, masques et tambours internationaux.",
+            footerText: "&copy; 2026 Artesanía Artesana. Tous droits réservés."
+        },
+        it: {
+            navHome: "Inizio",
+            navCeramics: "Ceramica",
+            navMetal: "Metallo",
+            navWood: "Legno",
+            navContact: "Contatto",
+            heroTitle: "Arte e Tradizione nelle Tue Mani",
+            heroText: "Diffondendo la nostra artigianalità unica a livello nazionale e internazionale.",
+            heroBtn: "Vedi Catalogo",
+            f1Title: "Ceramica",
+            f1Text: "Pezzi artistici, stoviglie, contenitori, brocche e vasi modellati con maestria.",
+            f2Title: "Metallo e Forgiatura",
+            f2Text: "Lavori di fonderia, armi storiche, armature e forgiatura tradizionale.",
+            f3Title: "Legno ed Etnico",
+            f3Text: "Arredamento nazionale, artigianalità religiosa, maschere e tamburi internazionali.",
+            footerText: "&copy; 2026 Artesanía Artesana. Tutti i diritti riservati."
         }
     };
 
+    // Actualizamos los elementos en la página
     document.getElementById('navHome').innerText = translations[lang].navHome;
     document.getElementById('navCeramics').innerText = translations[lang].navCeramics;
     document.getElementById('navMetal').innerText = translations[lang].navMetal;
