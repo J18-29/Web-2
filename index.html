@@ -18,11 +18,11 @@
         
         <!-- Bloque Centro: Menú -->
         <nav>
-            <a href="#" data-es="Inicio" data-en="Home" id="navHome">Inicio</a>
-            <a href="#" data-es="Cerámica" data-en="Ceramics" id="navCeramics">Cerámica</a>
-            <a href="#" data-es="Metal" data-en="Metal" id="navMetal">Metal</a>
-            <a href="#" data-es="Madera" data-en="Wood" id="navWood">Madera</a>
-            <a href="#" data-es="Contacto" data-en="Contact" id="navContact">Contacto</a>
+            <a href="#" data-es="Inicio" data-en="Home" data-fr="Accueil" data-it="Inizio" id="navHome">Inicio</a>
+            <a href="#" data-es="Cerámica" data-en="Ceramics" data-fr="Céramique" data-it="Ceramica" id="navCeramics">Cerámica</a>
+            <a href="#" data-es="Metal" data-en="Metal" data-fr="Métal" data-it="Metallo" id="navMetal">Metal</a>
+            <a href="#" data-es="Madera" data-en="Wood" data-fr="Bois" data-it="Legno" id="navWood">Madera</a>
+            <a href="#" data-es="Contacto" data-en="Contact" data-fr="Contact" data-it="Contatto" id="navContact">Contacto</a>
         </nav>
 
         <!-- Bloque Derecha: Selector de Idioma -->
@@ -30,44 +30,46 @@
             <select id="languageSelect" onchange="changeLanguage()">
                 <option value="es">Español</option>
                 <option value="en">English</option>
+                <option value="fr">Français</option>
+                <option value="it">Italiano</option>
             </select>
         </div>
     </header>
 
     <section class="hero">
-        <h1 id="heroTitle">Arte y Tradición en Tus Manos</h1>
-        <p id="heroText">Difundiendo nuestra artesanía única a nivel nacional e internacional.</p>
-        <a href="#" class="btn" id="heroBtn">Ver Catálogo</a>
+        <h1 id="heroTitle" data-es="Arte y Tradición en Tus Manos" data-en="Art and Tradition in Your Hands" data-fr="Art et Tradition dans Vos Mains" data-es-extra="..." data-fr-extra="..." data-it="Arte e Tradizione nelle Tue Mani">Arte y Tradición en Tus Manos</h1>
+        <p id="heroText" data-es="Difundiendo nuestra artesanía única a nivel nacional e internacional." data-en="Spreading our unique crafts nationally and internationally." data-fr="Diffusant notre artisanat unique à l'échelle nationale et internationale." data-it="Diffondendo la nostra artigianalità unica a livello nazionale e internazionale.">Difundiendo nuestra artesanía única a nivel nacional e internacional.</p>
+        <a href="#" class="btn" id="heroBtn" data-es="Ver Catálogo" data-en="View Catalog" data-fr="Voir le Catalogue" data-it="Vedi Catalogo">Ver Catálogo</a>
     </section>
 
     <div class="features">
         <div class="feature-box">
             <img src="img/imagen1.jpg" alt="Cerámica" class="feature-img" onerror="this.src='https://images.unsplash.com/photo-1578749556568-bc2c40e68b61?auto=format&fit=crop&w=400&q=80'">
             <div class="feature-content">
-                <h3 id="f1Title">Cerámica</h3>
-                <p id="f1Text">Piezas artísticas, menaje, recipientes, botijos y vasijas modeladas con maestría.</p>
+                <h3 id="f1Title" data-es="Cerámica" data-en="Ceramics" data-fr="Céramique" data-it="Ceramica">Cerámica</h3>
+                <p id="f1Text" data-es="Piezas artísticas, menaje, recipientes, botijos y vasijas modeladas con maestría." data-en="Artistic pieces, tableware, containers, water jugs and masterfully modeled vessels." data-fr="Pièces artistiques, vaisselle, récipients, bucchères et vases modelés avec maîtrise." data-it="Pezzi artistici, stoviglie, contenitori, brocche e vasi modellati con maestria.">Piezas artísticas, menaje, recipientes, botijos y vasijas modeladas con maestría.</p>
             </div>
         </div>
 
         <div class="feature-box">
             <img src="img/imagen2.jpg" alt="Metal y Forja" class="feature-img" onerror="this.src='https://images.unsplash.com/photo-1565193566173-7a0ee3dbe261?auto=format&fit=crop&w=400&q=80'">
             <div class="feature-content">
-                <h3 id="f2Title">Metal y Forja</h3>
-                <p id="f2Text">Trabajos de fundición, armas históricas, armaduras y forja tradicional.</p>
+                <h3 id="f2Title" data-es="Metal y Forja" data-en="Metal and Forging" data-fr="Métal et Forge" data-it="Metallo e Forgiatura">Metal y Forja</h3>
+                <p id="f2Text" data-es="Trabajos de fundición, armas históricas, armaduras y forja tradicional." data-en="Foundry works, historical weapons, armor, and traditional forging." data-fr="Travaux de fonderie, armes historiques, armures et forge traditionnelle." data-it="Lavori di fonderia, armi storiche, armature e forgiatura tradizionale.">Trabajos de fundición, armas históricas, armaduras y forja tradicional.</p>
             </div>
         </div>
 
         <div class="feature-box">
             <img src="img/imagen3.jpg" alt="Madera y Étnica" class="feature-img" onerror="this.src='https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&fit=crop&w=400&q=80'">
             <div class="feature-content">
-                <h3 id="f3Title">Madera y Étnica</h3>
-                <p id="f3Text">Mobiliario nacional, artesanía religiosa, máscaras y tambores internacionales.</p>
+                <h3 id="f3Title" data-es="Madera y Étnica" data-en="Wood and Ethnic" data-fr="Bois et Éthique" data-it="Legno ed Etnico">Madera y Étnica</h3>
+                <p id="f3Text" data-es="Mobiliario nacional, artesanía religiosa, máscaras y tambores internacionales." data-en="National furniture, religious crafts, international masks and drums." data-fr="Mobilier national, artisanat religieux, masques et tambours internationaux." data-it="Arredamento nazionale, artigianalità religiosa, maschere e tamburi internazionali.">Mobiliario nacional, artesanía religiosa, máscaras y tambores internacionales.</p>
             </div>
         </div>
     </div>
 
     <footer>
-        <p id="footerText">&copy; 2026 Artesanía Artesana. Todos los derechos reservados.</p>
+        <p id="footerText" data-es="&copy; 2026 Artesanía Artesana. Todos los derechos reservados." data-en="&copy; 2026 Artesanía Artesana. All rights reserved." data-fr="&copy; 2026 Artesanía Artesana. Tous droits réservés." data-it="&copy; 2026 Artesanía Artesana. Tutti i diritti riservati.">&copy; 2026 Artesanía Artesana. Todos los derechos reservados.</p>
     </footer>
 
     <script src="app.js"></script>
