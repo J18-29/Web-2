@@ -3,71 +3,230 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Artesanía Artesana - Inicio</title>
+    <title>Artesanía Artesana - Catálogo y Contacto</title>
     <link rel="stylesheet" href="estilos.css">
 </head>
 <body>
 
+    <!-- ================= HEADER / NAVEGACIÓN ================= -->
     <header>
         <!-- Bloque Izquierda: Logo -->
         <div class="header-left">
             <div class="logo-container">
-                <img src="img/logo.png" alt="Artesanía Artesana Logo" class="logo-img" onerror="this.style.display='none'">
+                <a href="#inicio">
+                    <img src="img/logo.png" alt="Artesanía Artesana Logo" class="logo-img" onerror="this.style.display='none'">
+                </a>
             </div>
         </div>
         
-        <!-- Bloque Centro: Menú -->
-        <nav>
-            <a href="#" data-es="Inicio" data-en="Home" data-fr="Accueil" data-it="Inizio" id="navHome">Inicio</a>
-            <a href="#" data-es="Cerámica" data-en="Ceramics" data-fr="Céramique" data-it="Ceramica" id="navCeramics">Cerámica</a>
-            <a href="#" data-es="Metal" data-en="Metal" data-fr="Métal" data-it="Metallo" id="navMetal">Metal</a>
-            <a href="#" data-es="Madera" data-en="Wood" data-fr="Bois" data-it="Legno" id="navWood">Madera</a>
-            <a href="#" data-es="Contacto" data-en="Contact" data-fr="Contact" data-it="Contatto" id="navContact">Contacto</a>
+        <!-- Bloque Centro: Menú de Navegación jerárquico -->
+        <nav class="main-nav">
+            <a href="#inicio" id="navHome" data-es="Inicio" data-en="Home" data-fr="Accueil" data-it="Inizio">Inicio</a>
+            
+            <!-- Cerámica -->
+            <div class="dropdown">
+                <a href="#ceramica" class="dropbtn" data-es="Cerámica" data-en="Ceramics" data-fr="Céramique" data-it="Ceramica">Cerámica ▾</a>
+                <div class="dropdown-content">
+                    <div class="dropdown-sub">
+                        <span data-es="Artística" data-en="Artistic" data-fr="Artistique" data-it="Artistica">Artística ▸</span>
+                        <div class="sub-menu">
+                            <a href="#cat-ceramica-platos" data-es="Platos" data-en="Plates" data-fr="Assiettes" data-it="Piatti">Platos</a>
+                            <a href="#cat-ceramica-vasos" data-es="Vasos" data-en="Glasses" data-fr="Verres" data-it="Bicchieri">Vasos</a>
+                            <a href="#cat-ceramica-figuras" data-es="Figuras decorativas" data-en="Decorative Figures" data-fr="Figurines" data-it="Figure decorative">Figuras decorativas</a>
+                        </div>
+                    </div>
+                    <div class="dropdown-sub">
+                        <span data-es="Recipientes" data-en="Containers" data-fr="Récipients" data-it="Contenitori">Recipientes ▸</span>
+                        <div class="sub-menu">
+                            <a href="#cat-ceramica-botijos" data-es="Botijos" data-en="Water Jugs" data-fr="Bruchs" data-it="Brocche">Botijos</a>
+                            <a href="#cat-ceramica-vasijas" data-es="Vasijas" data-en="Vessels" data-fr="Vases" data-it="Vasi">Vasijas</a>
+                            <a href="#cat-ceramica-ceniceros" data-es="Ceniceros" data-en="Ashtrays" data-fr="Cendriers" data-it="Portacenere">Ceniceros</a>
+                            <a href="#cat-ceramica-tazones" data-es="Tazones" data-en="Bowls/Mugs" data-fr="Bols" data-it="Tazze">Tazones</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Metal -->
+            <div class="dropdown">
+                <a href="#metal" class="dropbtn" data-es="Metal" data-en="Metal" data-fr="Métal" data-it="Metallo">Metal ▾</a>
+                <div class="dropdown-content">
+                    <div class="dropdown-sub">
+                        <span data-es="Fundición" data-en="Foundry" data-fr="Fonderie" data-it="Fonderia">Fundición ▸</span>
+                        <div class="sub-menu">
+                            <a href="#cat-metal-medallas" data-es="Medallas" data-en="Medals" data-fr="Médailles" data-it="Medaglie">Medallas</a>
+                            <a href="#cat-metal-trofeos" data-es="Trofeos" data-en="Trophies" data-fr="Trophées" data-it="Trofei">Trofeos</a>
+                            <a href="#cat-metal-monedas" data-es="Monedas" data-en="Coins" data-fr="Pièces de monnaie" data-it="Monete">Monedas</a>
+                        </div>
+                    </div>
+                    <div class="dropdown-sub">
+                        <span data-es="Histórico" data-en="Historical" data-fr="Historique" data-it="Storico">Histórico ▸</span>
+                        <div class="sub-menu">
+                            <a href="#cat-metal-armas" data-es="Armas" data-en="Weapons" data-fr="Armes" data-it="Armi">Armas</a>
+                            <a href="#cat-metal-armaduras" data-es="Armaduras" data-en="Armor" data-fr="Armures" data-it="Armature">Armaduras</a>
+                            <a href="#cat-metal-escudos" data-es="Escudos" data-en="Shields" data-fr="Boucliers" data-it="Scudi">Escudos</a>
+                        </div>
+                    </div>
+                    <div class="dropdown-sub">
+                        <span data-es="Forja" data-en="Forging" data-fr="Forge" data-it="Forgiatura">Forja ▸</span>
+                        <div class="sub-menu">
+                            <a href="#cat-metal-forja-artistica" data-es="Artística (Figuras/Recipientes)" data-en="Artistic" data-fr="Artistique" data-it="Artistica">Artística</a>
+                            <a href="#cat-metal-verjas" data-es="Verjas" data-en="Gates/Grilles" data-fr="Grilles" data-it="Cancelli">Verjas</a>
+                            <a href="#cat-metal-cabeceros" data-es="Cabeceros" data-en="Headboards" data-fr="Têtes de lit" data-it="Testiere">Cabeceros</a>
+                            <a href="#cat-metal-candelabros" data-es="Candelabros" data-en="Candelabras" data-fr="Candelabres" data-it="Candelabri">Candelabros</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Madera -->
+            <div class="dropdown">
+                <a href="#madera" class="dropbtn" data-es="Madera" data-en="Wood" data-fr="Bois" data-it="Legno">Madera ▾</a>
+                <div class="dropdown-content">
+                    <div class="dropdown-sub">
+                        <span data-es="Nacional" data-en="National" data-fr="National" data-it="Nazionale">Nacional ▸</span>
+                        <div class="sub-menu">
+                            <a href="#cat-madera-mobiliario" data-es="Mobiliario" data-en="Furniture" data-fr="Mobilier" data-it="Mobili">Mobiliario</a>
+                            <a href="#cat-madera-figura" data-es="Figura" data-en="Figures" data-fr="Figurine" data-it="Figura">Figura</a>
+                            <a href="#cat-madera-menaje" data-es="Menaje" data-en="Tableware" data-fr="Vaisselle" data-it="Stoviglie">Menaje</a>
+                        </div>
+                    </div>
+                    <div class="dropdown-sub">
+                        <span data-es="Internacional" data-en="International" data-fr="International" data-it="Internazionale">Internacional ▸</span>
+                        <div class="sub-menu">
+                            <a href="#cat-madera-religiosa" data-es="Artesanía religiosa" data-en="Religious craft" data-fr="Artisanat religieux" data-it="Artigianato religioso">Artesanía religiosa</a>
+                            <a href="#cat-madera-figuras-int" data-es="Figuras" data-en="Figures" data-fr="Figurines" data-it="Figure">Figuras</a>
+                            <a href="#cat-madera-menaje-etnico" data-es="Menaje étnico" data-en="Ethnic tableware" data-fr="Vaisselle ethnique" data-it="Stoviglie etniche">Menaje étnico</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Artesanía Étnica -->
+            <div class="dropdown">
+                <a href="#etnica" class="dropbtn" data-es="Artesanía Étnica" data-en="Ethnic Craft" data-fr="Artisanat Ethnique" data-it="Artigianato Etnico">Artesanía Étnica ▾</a>
+                <div class="dropdown-content">
+                    <a href="#cat-etnica-mascaras" data-es="Máscaras" data-en="Masks" data-fr="Masques" data-it="Maschere">Máscaras</a>
+                    <a href="#cat-etnica-tambores" data-es="Tambores" data-en="Drums" data-fr="Tambours" data-it="Tamburi">Tambores</a>
+                    <a href="#cat-etnica-utiles" data-es="Útiles" data-en="Tools / Utensils" data-fr="Ustensiles" data-it="Utensili">Útiles</a>
+                    <a href="#cat-etnica-armas" data-es="Armas" data-en="Weapons" data-fr="Armes" data-it="Armi">Armas</a>
+                </div>
+            </div>
+
+            <a href="#contacto" id="navContact" data-es="Contacto" data-en="Contact" data-fr="Contact" data-it="Contatto">Contacto</a>
         </nav>
 
         <!-- Bloque Derecha: Selector de Idioma -->
         <div class="lang-selector">
-           <select id="languageSelect" onchange="changeLanguage()">
-    <option value="es">Español</option>
-    <option value="en">English</option>
-    <option value="fr">Français</option>
-    <option value="it">Italiano</option>
-</select>
+            <select id="languageSelect" onchange="changeLanguage()">
+                <option value="es">Español</option>
+                <option value="en">English</option>
+                <option value="fr">Français</option>
+                <option value="it">Italiano</option>
+            </select>
         </div>
     </header>
 
-    <section class="hero">
-        <h1 id="heroTitle" data-es="Arte y Tradición en Tus Manos" data-en="Art and Tradition in Your Hands" data-fr="Art et Tradition dans Vos Mains" data-es-extra="..." data-fr-extra="..." data-it="Arte e Tradizione nelle Tue Mani">Arte y Tradición en Tus Manos</h1>
+    <!-- ================= SECCIÓN HERO ================= -->
+    <section class="hero" id="inicio">
+        <h1 id="heroTitle" data-es="Arte y Tradición en Tus Manos" data-en="Art and Tradition in Your Hands" data-fr="Art et Tradition dans Vos Mains" data-it="Arte e Tradizione nelle Tue Mani">Arte y Tradición en Tus Manos</h1>
         <p id="heroText" data-es="Difundiendo nuestra artesanía única a nivel nacional e internacional." data-en="Spreading our unique crafts nationally and internationally." data-fr="Diffusant notre artisanat unique à l'échelle nationale et internationale." data-it="Diffondendo la nostra artigianalità unica a livello nazionale e internazionale.">Difundiendo nuestra artesanía única a nivel nacional e internacional.</p>
-        <a href="#" class="btn" id="heroBtn" data-es="Ver Catálogo" data-en="View Catalog" data-fr="Voir le Catalogue" data-it="Vedi Catalogo">Ver Catálogo</a>
+        <a href="#catalogo" class="btn" id="heroBtn" data-es="Ver Catálogo" data-en="View Catalog" data-fr="Voir le Catalogue" data-it="Vedi Catalogo">Ver Catálogo</a>
     </section>
 
-    <div class="features">
-        <div class="feature-box">
-            <img src="img/imagen1.jpg" alt="Cerámica" class="feature-img" onerror="this.src='https://images.unsplash.com/photo-1578749556568-bc2c40e68b61?auto=format&fit=crop&w=400&q=80'">
-            <div class="feature-content">
-                <h3 id="f1Title" data-es="Cerámica" data-en="Ceramics" data-fr="Céramique" data-it="Ceramica">Cerámica</h3>
-                <p id="f1Text" data-es="Piezas artísticas, menaje, recipientes, botijos y vasijas modeladas con maestría." data-en="Artistic pieces, tableware, containers, water jugs and masterfully modeled vessels." data-fr="Pièces artistiques, vaisselle, récipients, bucchères et vases modelés avec maîtrise." data-it="Pezzi artistici, stoviglie, contenitori, brocche e vasi modellati con maestria.">Piezas artísticas, menaje, recipientes, botijos y vasijas modeladas con maestría.</p>
-            </div>
+    <!-- ================= SECCIÓN CATÁLOGO DE PRODUCTOS ================= -->
+    <section class="catalog-section" id="catalogo">
+        <h2 id="catalogTitle" data-es="Nuestros Productos" data-en="Our Products" data-fr="Nos Produits" data-it="I Nostri Prodotti">Nuestros Productos</h2>
+        <p class="catalog-subtitle" data-es="Explora nuestro catálogo de artesanía hecha a mano." data-en="Explore our handmade craft catalog." data-fr="Explorez notre catalogue d'artisanat fait main." data-it="Esplora il nostro catalogo di artigianato fatto a mano.">Explora nuestro catálogo de artesanía hecha a mano.</p>
+
+        <!-- Filtros Rápidos / Categorías -->
+        <div class="filter-bar">
+            <button class="filter-btn active" onclick="filterProducts('all')" data-es="Todos" data-en="All" data-fr="Tous" data-it="Tutti">Todos</button>
+            <button class="filter-btn" onclick="filterProducts('ceramica')" data-es="Cerámica" data-en="Ceramics" data-fr="Céramique" data-it="Ceramica">Cerámica</button>
+            <button class="filter-btn" onclick="filterProducts('metal')" data-es="Metal" data-en="Metal" data-fr="Métal" data-it="Metallo">Metal</button>
+            <button class="filter-btn" onclick="filterProducts('madera')" data-es="Madera" data-en="Wood" data-fr="Bois" data-it="Legno">Madera</button>
+            <button class="filter-btn" onclick="filterProducts('etnica')" data-es="Artesanía Étnica" data-en="Ethnic Craft" data-fr="Artisanat Ethnique" data-it="Artigianato Etnico">Artesanía Étnica</button>
         </div>
 
-        <div class="feature-box">
-            <img src="img/imagen2.jpg" alt="Metal y Forja" class="feature-img" onerror="this.src='https://images.unsplash.com/photo-1565193566173-7a0ee3dbe261?auto=format&fit=crop&w=400&q=80'">
-            <div class="feature-content">
-                <h3 id="f2Title" data-es="Metal y Forja" data-en="Metal and Forging" data-fr="Métal et Forge" data-it="Metallo e Forgiatura">Metal y Forja</h3>
-                <p id="f2Text" data-es="Trabajos de fundición, armas históricas, armaduras y forja tradicional." data-en="Foundry works, historical weapons, armor, and traditional forging." data-fr="Travaux de fonderie, armes historiques, armures et forge traditionnelle." data-it="Lavori di fonderia, armi storiche, armature e forgiatura tradizionale.">Trabajos de fundición, armas históricas, armaduras y forja tradicional.</p>
+        <!-- Grilla de Productos (Cargada / Renderizada dinámicamente o fija) -->
+        <div class="products-grid" id="productsGrid">
+
+            <!-- Ejemplo Producto 1: Cerámica -->
+            <div class="product-card" data-category="ceramica" data-subcategory="botijos">
+                <img src="img/botijo.jpg" alt="Botijo Tradicional" class="product-img" onerror="this.src='https://images.unsplash.com/photo-1578749556568-bc2c40e68b61?auto=format&fit=crop&w=400&q=80'">
+                <div class="product-info">
+                    <span class="badge">Cerámica - Botijos</span>
+                    <h3>Botijo de Barro Tradicional</h3>
+                    <p>Elaborado a mano con técnicas ancestrales de modelado para mantener el agua fresca de forma natural.</p>
+                </div>
+            </div>
+
+            <!-- Ejemplo Producto 2: Metal -->
+            <div class="product-card" data-category="metal" data-subcategory="armas">
+                <img src="img/espada.jpg" alt="Espada Histórica Forjada" class="product-img" onerror="this.src='https://images.unsplash.com/photo-1565193566173-7a0ee3dbe261?auto=format&fit=crop&w=400&q=80'">
+                <div class="product-info">
+                    <span class="badge">Metal - Histórico</span>
+                    <h3>Réplica Espada Histórica</h3>
+                    <p>Forjada artesanalmente en acero con acabados detallados en la empuñadura.</p>
+                </div>
+            </div>
+
+            <!-- Ejemplo Producto 3: Madera -->
+            <div class="product-card" data-category="madera" data-subcategory="mobiliario">
+                <img src="img/silla_madera.jpg" alt="Mesa de Madera Tallada" class="product-img" onerror="this.src='https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&fit=crop&w=400&q=80'">
+                <div class="product-info">
+                    <span class="badge">Madera - Nacional</span>
+                    <h3>Mesa Talla Roble</h3>
+                    <p>Mobiliario exclusivo elaborado en roble macizo con grabados hechos totalmente a mano.</p>
+                </div>
+            </div>
+
+            <!-- Ejemplo Producto 4: Étnica -->
+            <div class="product-card" data-category="etnica" data-subcategory="mascaras">
+                <img src="img/mascara.jpg" alt="Máscara Ritual Étnica" class="product-img" onerror="this.src='https://images.unsplash.com/photo-1534447677768-be436bb09401?auto=format&fit=crop&w=400&q=80'">
+                <div class="product-info">
+                    <span class="badge">Artesanía Étnica</span>
+                    <h3>Máscara Ceremonial</h3>
+                    <p>Pieza decorativa única elaborada e importada con acabados y pigmentos naturales.</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ================= SECCIÓN CONTACTO Y UBICACIÓN ================= -->
+    <section class="contact-section" id="contacto">
+        <h2 id="contactTitle" data-es="Contacto y Ubicación" data-en="Contact and Location" data-fr="Contact et Emplacement" data-it="Contatto e Posizione">Contacto y Ubicación</h2>
+        
+        <div class="contact-container">
+            <!-- Datos de Contacto -->
+            <div class="contact-info">
+                <h3 data-es="Visítanos o Escríbenos" data-en="Visit or Write Us" data-fr="Visitez-nous ou Écrivez-nous" data-it="Visitaci o Scrivici">Visítanos o Escríbenos</h3>
+                <p><strong>📍 <span data-es="Dirección:" data-en="Address:" data-fr="Adresse:" data-it="Indirizzo:">Dirección:</span></strong> Calle de los Artesanos, 24, 28001 Madrid, España</p>
+                <p><strong>📞 <span data-es="Teléfono:" data-en="Phone:" data-fr="Téléphone:" data-it="Telefono:">Teléfono:</span></strong> +34 912 345 678 / +34 600 000 000</p>
+                <p><strong>✉️ <span data-es="Correo:" data-en="Email:" data-fr="E-mail:" data-it="E-mail:">Correo:</span></strong> contacto@artesaniaartesana.com</p>
+                <p><strong>🕒 <span data-es="Horario:" data-en="Hours:" data-fr="Horaires:" data-it="Orario:">Horario:</span></strong> Lunes a Viernes: 09:00 - 19:00 | Sábados: 10:00 - 14:00</p>
+            </div>
+
+            <!-- Croquis / Mapa de Ubicación -->
+            <div class="map-container">
+                <h3 data-es="Ubicación / Croquis" data-en="Location / Map" data-fr="Emplacement / Carte" data-it="Posizione / Mappa">Ubicación / Croquis</h3>
+                <!-- Puedes incluir una imagen fija de croquis o un iframe interactivo de Google Maps -->
+                <div class="map-box">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12148.868778000572!2d-3.703790!3d40.416775!2m3!1f02f0!0f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDDCsDI1JzAwLjQiTiAzwrA0Mic00C4yIlc!5e0!3m2!1ses!2ses!4v1620000000000!5m2!1ses!2ses" 
+                        width="100%" 
+                        height="250" 
+                        style="border:0; border-radius: 8px;" 
+                        allowfullscreen="" 
+                        loading="lazy">
+                    </iframe>
+                </div>
             </div>
         </div>
+    </section>
 
-        <div class="feature-box">
-            <img src="img/imagen3.jpg" alt="Madera y Étnica" class="feature-img" onerror="this.src='https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&fit=crop&w=400&q=80'">
-            <div class="feature-content">
-                <h3 id="f3Title" data-es="Madera y Étnica" data-en="Wood and Ethnic" data-fr="Bois et Éthique" data-it="Legno ed Etnico">Madera y Étnica</h3>
-                <p id="f3Text" data-es="Mobiliario nacional, artesanía religiosa, máscaras y tambores internacionales." data-en="National furniture, religious crafts, international masks and drums." data-fr="Mobilier national, artisanat religieux, masques et tambours internationaux." data-it="Arredamento nazionale, artigianalità religiosa, maschere e tamburi internazionali.">Mobiliario nacional, artesanía religiosa, máscaras y tambores internacionales.</p>
-            </div>
-        </div>
-    </div>
-
+    <!-- ================= FOOTER ================= -->
     <footer>
         <p id="footerText" data-es="&copy; 2026 Artesanía Artesana. Todos los derechos reservados." data-en="&copy; 2026 Artesanía Artesana. All rights reserved." data-fr="&copy; 2026 Artesanía Artesana. Tous droits réservés." data-it="&copy; 2026 Artesanía Artesana. Tutti i diritti riservati.">&copy; 2026 Artesanía Artesana. Todos los derechos reservados.</p>
     </footer>

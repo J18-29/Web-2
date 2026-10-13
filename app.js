@@ -1,91 +1,157 @@
+// ================= FUNCIÓN DE CAMBIO DE IDIOMA =================
 function changeLanguage() {
     const lang = document.getElementById('languageSelect').value;
     
     const translations = {
         es: {
             navHome: "Inicio",
-            navCeramics: "Cerámica",
-            navMetal: "Metal",
-            navWood: "Madera",
+            navCeramics: "Cerámica ▾",
+            navMetal: "Metal ▾",
+            navWood: "Madera ▾",
+            navEthnic: "Artesanía Étnica ▾",
             navContact: "Contacto",
             heroTitle: "Arte y Tradición en Tus Manos",
             heroText: "Difundiendo nuestra artesanía única a nivel nacional e internacional.",
             heroBtn: "Ver Catálogo",
-            f1Title: "Cerámica",
-            f1Text: "Piezas artísticas, menaje, recipientes, botijos y vasijas modeladas con maestría.",
-            f2Title: "Metal y Forja",
-            f2Text: "Trabajos de fundición, armas históricas, armaduras y forja tradicional.",
-            f3Title: "Madera y Étnica",
-            f3Text: "Mobiliario nacional, artesanía religiosa, máscaras y tambores internacionales.",
+            catalogTitle: "Nuestros Productos",
+            catalogSubtitle: "Explora nuestro catálogo de artesanía hecha a mano.",
+            filterAll: "Todos",
+            filterCeramics: "Cerámica",
+            filterMetal: "Metal",
+            filterWood: "Madera",
+            filterEthnic: "Artesanía Étnica",
+            contactTitle: "Contacto y Ubicación",
+            contactVisitTitle: "Visítanos o Escríbenos",
+            contactAddress: "Dirección:",
+            contactPhone: "Teléfono:",
+            contactEmail: "Correo:",
+            contactHours: "Horario:",
+            mapTitle: "Ubicación / Croquis",
             footerText: "&copy; 2026 Artesanía Artesana. Todos los derechos reservados."
         },
         en: {
             navHome: "Home",
-            navCeramics: "Ceramics",
-            navMetal: "Metal",
-            navWood: "Wood",
+            navCeramics: "Ceramics ▾",
+            navMetal: "Metal ▾",
+            navWood: "Wood ▾",
+            navEthnic: "Ethnic Craft ▾",
             navContact: "Contact",
             heroTitle: "Art and Tradition in Your Hands",
             heroText: "Spreading our unique craft nationally and internationally.",
             heroBtn: "View Catalog",
-            f1Title: "Ceramics",
-            f1Text: "Artistic pieces, tableware, containers, water jugs and vessels masterfully molded.",
-            f2Title: "Metal & Ironwork",
-            f2Text: "Casting work, historical weapons, armor and traditional forge.",
-            f3Title: "Wood & Ethnic",
-            f3Text: "National furniture, religious crafts, international masks and drums.",
+            catalogTitle: "Our Products",
+            catalogSubtitle: "Explore our handmade craft catalog.",
+            filterAll: "All",
+            filterCeramics: "Ceramics",
+            filterMetal: "Metal",
+            filterWood: "Wood",
+            filterEthnic: "Ethnic Craft",
+            contactTitle: "Contact and Location",
+            contactVisitTitle: "Visit or Write Us",
+            contactAddress: "Address:",
+            contactPhone: "Phone:",
+            contactEmail: "Email:",
+            contactHours: "Hours:",
+            mapTitle: "Location / Map",
             footerText: "&copy; 2026 Artesanía Artesana. All rights reserved."
         },
         fr: {
             navHome: "Accueil",
-            navCeramics: "Céramique",
-            navMetal: "Métal",
-            navWood: "Bois",
+            navCeramics: "Céramique ▾",
+            navMetal: "Métal ▾",
+            navWood: "Bois ▾",
+            navEthnic: "Artisanat Ethnique ▾",
             navContact: "Contact",
             heroTitle: "Art et Tradition dans Vos Mains",
             heroText: "Diffusant notre artisanat unique à l'échelle nationale et internationale.",
             heroBtn: "Voir le Catalogue",
-            f1Title: "Céramique",
-            f1Text: "Pièces artistiques, vaisselle, récipients et vases modelés avec maîtrise.",
-            f2Title: "Métal et Forge",
-            f2Text: "Travaux de fonderie, armes historiques, armures et forge traditionnelle.",
-            f3Title: "Bois et Ethnique",
-            f3Text: "Mobilier national, artisanat religieux, masques et tambours internationaux.",
+            catalogTitle: "Nos Produits",
+            catalogSubtitle: "Explorez notre catalogue d'artisanat fait main.",
+            filterAll: "Tous",
+            filterCeramics: "Céramique",
+            filterMetal: "Métal",
+            filterWood: "Bois",
+            filterEthnic: "Artisanat Ethnique",
+            contactTitle: "Contact et Emplacement",
+            contactVisitTitle: "Visitez-nous ou Écrivez-nous",
+            contactAddress: "Adresse:",
+            contactPhone: "Téléphone:",
+            contactEmail: "E-mail:",
+            contactHours: "Horaires:",
+            mapTitle: "Emplacement / Carte",
             footerText: "&copy; 2026 Artesanía Artesana. Tous droits réservés."
         },
         it: {
             navHome: "Inizio",
-            navCeramics: "Ceramica",
-            navMetal: "Metallo",
-            navWood: "Legno",
+            navCeramics: "Ceramica ▾",
+            navMetal: "Metallo ▾",
+            navWood: "Legno ▾",
+            navEthnic: "Artigianato Etnico ▾",
             navContact: "Contatto",
             heroTitle: "Arte e Tradizione nelle Tue Mani",
             heroText: "Diffondendo la nostra artigianalità unica a livello nazionale e internazionale.",
             heroBtn: "Vedi Catalogo",
-            f1Title: "Ceramica",
-            f1Text: "Pezzi artistici, stoviglie, contenitori, brocche e vasi modellati con maestria.",
-            f2Title: "Metallo e Forgiatura",
-            f2Text: "Lavori di fonderia, armi storiche, armature e forgiatura tradizionale.",
-            f3Title: "Legno ed Etnico",
-            f3Text: "Arredamento nazionale, artigianalità religiosa, maschere e tamburi internazionali.",
+            catalogTitle: "I Nostri Prodotti",
+            catalogSubtitle: "Esplora il nostro catalogo di artigianato fatto a mano.",
+            filterAll: "Tutti",
+            filterCeramics: "Ceramica",
+            filterMetal: "Metallo",
+            filterWood: "Legno",
+            filterEthnic: "Artigianato Etnico",
+            contactTitle: "Contatto e Posizione",
+            contactVisitTitle: "Visitaci o Scrivici",
+            contactAddress: "Indirizzo:",
+            contactPhone: "Telefono:",
+            contactEmail: "E-mail:",
+            contactHours: "Orario:",
+            mapTitle: "Posizione / Mappa",
             footerText: "&copy; 2026 Artesanía Artesana. Tutti i diritti riservati."
         }
     };
 
-    // Actualizamos los elementos en la página
-    document.getElementById('navHome').innerText = translations[lang].navHome;
-    document.getElementById('navCeramics').innerText = translations[lang].navCeramics;
-    document.getElementById('navMetal').innerText = translations[lang].navMetal;
-    document.getElementById('navWood').innerText = translations[lang].navWood;
-    document.getElementById('navContact').innerText = translations[lang].navContact;
-    document.getElementById('heroTitle').innerText = translations[lang].heroTitle;
-    document.getElementById('heroText').innerText = translations[lang].heroText;
-    document.getElementById('heroBtn').innerText = translations[lang].heroBtn;
-    document.getElementById('f1Title').innerText = translations[lang].f1Title;
-    document.getElementById('f1Text').innerText = translations[lang].f1Text;
-    document.getElementById('f2Title').innerText = translations[lang].f2Title;
-    document.getElementById('f2Text').innerText = translations[lang].f2Text;
-    document.getElementById('f3Title').innerText = translations[lang].f3Title;
-    document.getElementById('f3Text').innerText = translations[lang].f3Text;
-    document.getElementById('footerText').innerHTML = translations[lang].footerText;
+    const currentDict = translations[lang];
+
+    // Actualizar textos principales si existen en el DOM
+    const safeSetText = (id, text) => {
+        const el = document.getElementById(id);
+        if (el) el.innerText = text;
+    };
+
+    safeSetText('navHome', currentDict.navHome);
+    safeSetText('navContact', currentDict.navContact);
+    safeSetText('heroTitle', currentDict.heroTitle);
+    safeSetText('heroText', currentDict.heroText);
+    safeSetText('heroBtn', currentDict.heroBtn);
+    safeSetText('catalogTitle', currentDict.catalogTitle);
+    safeSetText('catalogSubtitle', currentDict.catalogSubtitle);
+    safeSetText('contactTitle', currentDict.contactTitle);
+    safeSetText('mapTitle', currentDict.mapTitle);
+
+    const footerEl = document.getElementById('footerText');
+    if (footerEl) footerEl.innerHTML = currentDict.footerText;
+
+    // Traducir dinámicamente todos los elementos que tengan atributos data-es, data-en, data-fr, data-it
+    document.querySelectorAll(`[data-${lang}]`).forEach(element => {
+        element.innerText = element.getAttribute(`data-${lang}`);
+    });
+}
+
+// ================= FUNCIÓN DE FILTRADO DE PRODUCTOS =================
+function filterProducts(category) {
+    const cards = document.querySelectorAll('.product-card');
+    const buttons = document.querySelectorAll('.filter-btn');
+
+    // Cambiar estado activo de los botones de filtro
+    buttons.forEach(btn => btn.classList.remove('active'));
+    event.target.classList.add('active');
+
+    // Mostrar u ocultar productos según la categoría seleccionada
+    cards.forEach(card => {
+        const productCategory = card.getAttribute('data-category');
+        if (category === 'all' || productCategory === category) {
+            card.style.display = 'flex';
+        } else {
+            card.style.display = 'none';
+        }
+    });
 }

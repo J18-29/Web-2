@@ -1,8 +1,8 @@
 :root {
-    --bg-color: #F5F1E9;         /* #F5F1E9 */
-    --text-color: #292B25;       /* #292B25 */
-    --accent-color: #914D35;     /* #914D35 */
-    --card-bg: #D8D2C7;          /* #D8D2C7 */
+    --bg-color: #F5F1E9;        /* #F5F1E9 */
+    --text-color: #292B25;      /* #292B25 */
+    --accent-color: #914D35;    /* #914D35 */
+    --card-bg: #D8D2C7;         /* #D8D2C7 */
     --secondary-gray: #6D7065;   /* #6D7065 */
     --white: #FFFFFF;
 }
@@ -13,9 +13,10 @@ body {
     color: var(--text-color);
     margin: 0;
     padding: 0;
+    scroll-behavior: smooth;
 }
 
-/* Dividimos la cabecera en 3 secciones iguales para un centrado perfecto */
+/* ================= CABECERA Y NAVEGACIÓN DESPLEGABLE ================= */
 header {
     background-color: var(--white);
     padding: 10px 40px;
@@ -23,7 +24,9 @@ header {
     justify-content: space-between;
     align-items: center;
     border-bottom: 2px solid var(--card-bg);
-    overflow: visible;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
 .header-left {
@@ -40,7 +43,7 @@ header {
 }
 
 .logo-img {
-    height: 120px;
+    height: 100px;
     width: auto;
     object-fit: contain;
     position: absolute;
@@ -49,26 +52,106 @@ header {
     margin-top: 2px; 
 }
 
-nav {
+/* Navegación Principal */
+.main-nav {
     display: flex;
     justify-content: center;
-    gap: 30px;
-    flex: 1;
+    align-items: center;
+    gap: 20px;
+    flex: 2;
 }
 
-nav a {
+.main-nav > a, .dropbtn {
     text-decoration: none;
     color: var(--text-color);
-    font-weight: 600;      /* Aumentamos un poco el grosor para que destaque */
-    font-size: 18px;       /* Aumentamos el tamaño de la letra */
+    font-weight: 600;
+    font-size: 16px;
+    padding: 10px 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-family: inherit;
     transition: color 0.3s;
 }
 
-nav a:hover {
+.main-nav > a:hover, .dropbtn:hover {
     color: var(--accent-color);
 }
 
-/* El selector de idioma ocupa el bloque derecho y se alinea al extremo */
+/* Estilos de los Dropdowns */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: var(--white);
+    min-width: 200px;
+    box-shadow: 0px 8px 16px rgba(41, 43, 37, 0.15);
+    z-index: 1;
+    border-radius: 4px;
+    border: 1px solid var(--card-bg);
+    top: 100%;
+    left: 0;
+}
+
+.dropdown-content a {
+    color: var(--text-color);
+    padding: 10px 15px;
+    text-decoration: none;
+    display: block;
+    font-size: 14px;
+    transition: background 0.2s, color 0.2s;
+}
+
+.dropdown-content a:hover {
+    background-color: var(--bg-color);
+    color: var(--accent-color);
+}
+
+/* Submenús en Cascada (Nivel 3) */
+.dropdown-sub {
+    position: relative;
+}
+
+.dropdown-sub > span {
+    color: var(--text-color);
+    padding: 10px 15px;
+    display: block;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.dropdown-sub:hover > span {
+    background-color: var(--bg-color);
+    color: var(--accent-color);
+}
+
+.sub-menu {
+    display: none;
+    position: absolute;
+    left: 100%;
+    top: 0;
+    background-color: var(--white);
+    min-width: 180px;
+    box-shadow: 0px 8px 16px rgba(41, 43, 37, 0.15);
+    border-radius: 4px;
+    border: 1px solid var(--card-bg);
+}
+
+/* Mostrar dropdowns al pasar el cursor */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-sub:hover .sub-menu {
+    display: block;
+}
+
+/* Selector de Idioma */
 .lang-selector {
     display: flex;
     justify-content: flex-end;
@@ -76,18 +159,20 @@ nav a:hover {
 }
 
 .lang-selector select {
-    padding: 5px 10px;
+    padding: 6px 12px;
     border-radius: 4px;
     border: 1px solid var(--secondary-gray);
     background: var(--white);
     color: var(--text-color);
     font-weight: 500;
+    cursor: pointer;
 }
 
+/* ================= SECCIÓN HERO ================= */
 .hero {
     text-align: center;
-    padding: 90px 20px;
-    background: linear-gradient(rgba(41, 43, 37, 0.5), rgba(41, 43, 37, 0.5)), url('Img/hero-bg.jpg') no-repeat center center/cover;
+    padding: 100px 20px;
+    background: linear-gradient(rgba(41, 43, 37, 0.6), rgba(41, 43, 37, 0.6)), url('Img/hero-bg.jpg') no-repeat center center/cover;
     color: var(--white);
 }
 
@@ -110,59 +195,166 @@ nav a:hover {
     border-radius: 4px;
     font-weight: bold;
     display: inline-block;
-    transition: background 0.3s;
+    transition: background 0.3s, opacity 0.3s;
 }
 
 .btn:hover {
     opacity: 0.9;
 }
 
-.features {
-    display: flex;
-    justify-content: space-around;
-    padding: 60px 40px;
+/* ================= SECCIÓN CATÁLOGO DE PRODUCTOS ================= */
+.catalog-section {
     max-width: 1200px;
-    margin: 0 auto;
-    gap: 30px;
+    margin: 60px auto;
+    padding: 0 20px;
+    text-align: center;
 }
 
-.feature-box {
+.catalog-section h2 {
+    font-size: 36px;
+    margin-bottom: 10px;
+    color: var(--text-color);
+}
+
+.catalog-subtitle {
+    color: var(--secondary-gray);
+    font-size: 16px;
+    margin-bottom: 30px;
+}
+
+/* Filtros */
+.filter-bar {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    background-color: var(--card-bg);
+    border: none;
+    padding: 8px 18px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: 600;
+    color: var(--text-color);
+    transition: all 0.3s;
+}
+
+.filter-btn:hover, .filter-btn.active {
+    background-color: var(--accent-color);
+    color: var(--white);
+}
+
+/* Cuadrícula de Productos */
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 30px;
+    text-align: left;
+}
+
+.product-card {
     background: var(--white);
     border-top: 4px solid var(--accent-color);
     border-radius: 6px;
-    width: 30%;
-    text-align: center;
     box-shadow: 0 4px 6px rgba(41, 43, 37, 0.05);
     overflow: hidden;
     display: flex;
     flex-direction: column;
+    transition: transform 0.3s;
 }
 
-.feature-img {
+.product-card:hover {
+    transform: translateY(-5px);
+}
+
+.product-img {
     width: 100%;
-    height: 180px;
+    height: 200px;
     object-fit: cover;
 }
 
-.feature-content {
-    padding: 25px;
+.product-info {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
 }
 
-.feature-box h3 {
-    color: var(--text-color);
-    margin-top: 0;
-}
-
-.feature-box p {
+.badge {
+    font-size: 12px;
+    background-color: var(--bg-color);
     color: var(--secondary-gray);
-    font-size: 15px;
-    margin-bottom: 0;
+    padding: 4px 8px;
+    border-radius: 4px;
+    align-self: flex-start;
+    margin-bottom: 10px;
+    font-weight: 600;
 }
 
+.product-info h3 {
+    margin: 0 0 10px 0;
+    font-size: 18px;
+    color: var(--text-color);
+}
+
+.product-info p {
+    color: var(--secondary-gray);
+    font-size: 14px;
+    margin: 0;
+    line-height: 1.5;
+}
+
+/* ================= SECCIÓN CONTACTO Y UBICACIÓN ================= */
+.contact-section {
+    max-width: 1200px;
+    margin: 80px auto;
+    padding: 0 20px;
+}
+
+.contact-section h2 {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 40px;
+    color: var(--text-color);
+}
+
+.contact-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    background: var(--white);
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(41, 43, 37, 0.05);
+}
+
+.contact-info h3, .map-container h3 {
+    margin-top: 0;
+    color: var(--accent-color);
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+.contact-info p {
+    font-size: 16px;
+    margin-bottom: 15px;
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.map-box {
+    margin-top: 15px;
+}
+
+/* ================= FOOTER ================= */
 footer {
     text-align: center;
     padding: 25px;
     background-color: var(--text-color);
     color: var(--bg-color);
-    margin-top: 50px;
+    margin-top: 60px;
 }
+
